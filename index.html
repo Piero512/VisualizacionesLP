@@ -1,0 +1,143 @@
+<!doctype html>
+<html class="no-js" lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/graphics.css">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body class="container">
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- Add your site or application content here -->
+  <h1>Visualizaciones interactivas para el proyecto de lenguajes de programación.</h1>
+  <div class="row">
+    <div class="col-6">
+      <h2>Gráfico de ciudades con el promedio más alto de precio de reservaciones</h2>
+      <canvas id="canvas1"></canvas>
+      <p>
+        En este gráfico logramos observar que en promedio, las reservaciones son más caras en lugares que son turísticos,
+        mas no centros económicos.
+      </p>
+    </div>
+    <div class="col-6">
+      <h2>Gráfica de ciudades por promedio </h2>
+      <canvas id="canvas2"></canvas>
+      <p>
+        En este grafico podemos observar que las ciudades mas comentadas no son las más capitales económicas más grandes,
+        sino los destinos turísticos
+      </p>
+    </div>
+    <div class="col-6">
+      <h2>Gráfica de densidad poblacional por ciudad</h2>
+      <canvas id="canvas3"></canvas>
+      <p>
+        En este gráfico a pesar de no tener tantos puntos, se aprecia que la densidad poblacional es inversa a la popularidad de un destino.
+        Esto tiene sentido debido a que Airbnb es utilizado generalmente cuando la gente se va de vacaciones
+      </p>
+    </div>
+  </div>
+
+
+  <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js" integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
+  <script>
+    "use strict";
+    let canvas1 = document.getElementById("canvas1");
+    $.getJSON("data2.json", null,(data) => {
+      let chart = new Chart(canvas1, {
+        type: 'bar',
+        data: {
+          labels : data.map((d) => d.location),
+          datasets:[
+            {
+              label: "Precio promedio de reservación",
+              data: data.map((d) => d.avg_price),
+              backgroundColor: '#bdabfc'
+            }
+          ]
+        }
+
+      })
+    });
+    let canvas2 = document.getElementById('canvas2');
+    $.getJSON("data3.json", null, (data) => {
+      let data2 = data.slice(0,5);
+      let chart = new Chart(canvas2, {
+        type: 'pie',
+        data: {
+          labels: data2.map((d) => d.location),
+          datasets: [
+            {
+              label: "Numero promedio de comentarios",
+              data: data2.map((d) => d.avg_reviews),
+              backgroundColor: data2.map((d) => {
+                let r = Math.floor(Math.random() * 255);
+                let g = Math.floor(Math.random() * 255);
+                let b = Math.floor(Math.random() * 255);
+                return `rgba(${r}, ${g},${b},0.7)`;
+              })
+            }
+          ]
+        }
+      })
+    });
+
+    let canvas3 = document.getElementById('canvas3');
+    $.getJSON("data4.json", null, (data) => {
+      let data2 = data.slice(0,5);
+      let chart = new Chart(canvas3,{
+        type: 'scatter',
+        data: {
+          labels: data2.map((d) => d.provincia),
+          datasets: [
+            {
+              label: "Scatterplot numero hospedajes provincia/ densidad poblacional",
+              data: data2.map((d) => {
+                return {
+                  y: d["sum(hospedaje_total)"],
+                  x: d["dens_pobl"]
+                }
+              }),
+              backgroundColor: data2.map((d) => {
+                let r = Math.floor(Math.random() * 255);
+                let g = Math.floor(Math.random() * 255);
+                let b = Math.floor(Math.random() * 255);
+                return `rgba(${r}, ${g},${b},0.7)`;
+              })
+
+            }
+          ]
+        },
+        options: {
+          tooltips:{
+            callbacks:{
+              label: (tooltip, data) => {
+                return data.labels[tooltip.index];
+              }
+            }
+          }
+        }
+      })
+    })
+
+  </script>
+</body>
+
+</html>

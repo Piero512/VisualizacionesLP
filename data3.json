@@ -1,0 +1,267 @@
+[
+  {
+    "location": "Machalilla",
+    "avg_reviews": 92
+  },
+  {
+    "location": "Otavalo",
+    "avg_reviews": 51.3333
+  },
+  {
+    "location": "Mindo",
+    "avg_reviews": 41
+  },
+  {
+    "location": "Alausi",
+    "avg_reviews": 39
+  },
+  {
+    "location": "General Villamil",
+    "avg_reviews": 34
+  },
+  {
+    "location": "Banos",
+    "avg_reviews": 27
+  },
+  {
+    "location": "Guayas",
+    "avg_reviews": 24
+  },
+  {
+    "location": "Puyo",
+    "avg_reviews": 21.75
+  },
+  {
+    "location": "Baños, Cuenca",
+    "avg_reviews": 20
+  },
+  {
+    "location": "Latacunga",
+    "avg_reviews": 19.5
+  },
+  {
+    "location": "Canoa",
+    "avg_reviews": 19.3333
+  },
+  {
+    "location": "Manglar Alto",
+    "avg_reviews": 18
+  },
+  {
+    "location": "Salinas",
+    "avg_reviews": 15.9231
+  },
+  {
+    "location": "Baños de Agua Santa",
+    "avg_reviews": 15.4545
+  },
+  {
+    "location": "Parroquia La Dolorosa del Priorato",
+    "avg_reviews": 15
+  },
+  {
+    "location": "Playas",
+    "avg_reviews": 15
+  },
+  {
+    "location": "Punta Blanca",
+    "avg_reviews": 14.8
+  },
+  {
+    "location": "Ibarra",
+    "avg_reviews": 14
+  },
+  {
+    "location": "Salinas, Santa Elena, Ecuador",
+    "avg_reviews": 14
+  },
+  {
+    "location": "Cotacachi",
+    "avg_reviews": 13.5
+  },
+  {
+    "location": "Puerto López",
+    "avg_reviews": 13.3333
+  },
+  {
+    "location": "Riobamba",
+    "avg_reviews": 12.5
+  },
+  {
+    "location": "Guayaquil",
+    "avg_reviews": 11.7
+  },
+  {
+    "location": "Cuenca",
+    "avg_reviews": 10.2778
+  },
+  {
+    "location": "Olon",
+    "avg_reviews": 10
+  },
+  {
+    "location": "Quito",
+    "avg_reviews": 9.7037
+  },
+  {
+    "location": "Loja",
+    "avg_reviews": 8.75
+  },
+  {
+    "location": "Tena",
+    "avg_reviews": 8.6667
+  },
+  {
+    "location": "Samborondón",
+    "avg_reviews": 7
+  },
+  {
+    "location": "Ayampe",
+    "avg_reviews": 6.5882
+  },
+  {
+    "location": "Ambato",
+    "avg_reviews": 6.3333
+  },
+  {
+    "location": "Montanita",
+    "avg_reviews": 5
+  },
+  {
+    "location": "Puerto Lopez",
+    "avg_reviews": 5
+  },
+  {
+    "location": "Machala",
+    "avg_reviews": 4.2
+  },
+  {
+    "location": "Santa Elena",
+    "avg_reviews": 4
+  },
+  {
+    "location": "Santo Domingo",
+    "avg_reviews": 4
+  },
+  {
+    "location": "Montañita",
+    "avg_reviews": 3.4167
+  },
+  {
+    "location": "La Libertad",
+    "avg_reviews": 2
+  },
+  {
+    "location": "Provincia de Pastaza",
+    "avg_reviews": 2
+  },
+  {
+    "location": "Santa Elena Province",
+    "avg_reviews": 2
+  },
+  {
+    "location": "Simón Bolívar",
+    "avg_reviews": 2
+  },
+  {
+    "location": "Sucua",
+    "avg_reviews": 2
+  },
+  {
+    "location": "Provincia de Chimborazo",
+    "avg_reviews": 1
+  },
+  {
+    "location": "San Andrés",
+    "avg_reviews": 1
+  },
+  {
+    "location": "San Miguel de los Bancos",
+    "avg_reviews": 1
+  },
+  {
+    "location": "Vilcabamba",
+    "avg_reviews": 1
+  },
+  {
+    "location": "Cayambe",
+    "avg_reviews": 0.8
+  },
+  {
+    "location": "Manta",
+    "avg_reviews": 0.6667
+  },
+  {
+    "location": "Guaranda",
+    "avg_reviews": 0.3333
+  },
+  {
+    "location": "Amaguana",
+    "avg_reviews": 0
+  },
+  {
+    "location": "Ayangue",
+    "avg_reviews": 0
+  },
+  {
+    "location": "Ballenita",
+    "avg_reviews": 0
+  },
+  {
+    "location": "Chucchilán",
+    "avg_reviews": 0
+  },
+  {
+    "location": "Cojimies",
+    "avg_reviews": 0
+  },
+  {
+    "location": "Curia",
+    "avg_reviews": 0
+  },
+  {
+    "location": "EC",
+    "avg_reviews": 0
+  },
+  {
+    "location": "Francisco de Orellana",
+    "avg_reviews": 0
+  },
+  {
+    "location": "La Aurora",
+    "avg_reviews": 0
+  },
+  {
+    "location": "Machachi",
+    "avg_reviews": 0
+  },
+  {
+    "location": "Palora",
+    "avg_reviews": 0
+  },
+  {
+    "location": "Parroquia de Tumbabiro",
+    "avg_reviews": 0
+  },
+  {
+    "location": "Portoviejo",
+    "avg_reviews": 0
+  },
+  {
+    "location": "San Vicente",
+    "avg_reviews": 0
+  },
+  {
+    "location": "Santa Cruz",
+    "avg_reviews": 0
+  },
+  {
+    "location": "Tabacundo",
+    "avg_reviews": 0
+  },
+  {
+    "location": "Ulba",
+    "avg_reviews": 0
+  }
+]
+

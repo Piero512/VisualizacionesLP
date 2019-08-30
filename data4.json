@@ -1,0 +1,83 @@
+[
+  {
+    "provincia": "AZUAY",
+    "dens_pobl": "102.661024985619",
+    "sum(hospedaje_total)": 18
+  },
+  {
+    "provincia": "BOLIVAR",
+    "dens_pobl": "52.408386517902",
+    "sum(hospedaje_total)": 3
+  },
+  {
+    "provincia": "CHIMBORAZO",
+    "dens_pobl": "79.2983390053725",
+    "sum(hospedaje_total)": 21
+  },
+  {
+    "provincia": "COTOPAXI",
+    "dens_pobl": "77.997717833153",
+    "sum(hospedaje_total)": 2
+  },
+  {
+    "provincia": "EL ORO",
+    "dens_pobl": "121.134691018055",
+    "sum(hospedaje_total)": 5
+  },
+  {
+    "provincia": "GALAPAGOS",
+    "dens_pobl": "3.94506866416979",
+    "sum(hospedaje_total)": 1
+  },
+  {
+    "provincia": "GUAYAS",
+    "dens_pobl": "276.589913417669",
+    "sum(hospedaje_total)": 32
+  },
+  {
+    "provincia": "IMBABURA",
+    "dens_pobl": "101.13482041456",
+    "sum(hospedaje_total)": 15
+  },
+  {
+    "provincia": "LOJA",
+    "dens_pobl": "46.2077624600799",
+    "sum(hospedaje_total)": 8
+  },
+  {
+    "provincia": "MANABI",
+    "dens_pobl": "81.1574690067372",
+    "sum(hospedaje_total)": 7
+  },
+  {
+    "provincia": "MORONA SANTIAGO",
+    "dens_pobl": "7.81515748522407",
+    "sum(hospedaje_total)": 1
+  },
+  {
+    "provincia": "NAPO",
+    "dens_pobl": "10.2253936615507",
+    "sum(hospedaje_total)": 3
+  },
+  {
+    "provincia": "PICHINCHA",
+    "dens_pobl": "326.639454669908",
+    "sum(hospedaje_total)": 60
+  },
+  {
+    "provincia": "SANTA ELENA",
+    "dens_pobl": "104.087887549896",
+    "sum(hospedaje_total)": 16
+  },
+  {
+    "provincia": "SANTO DOMINGO DE LOS TSACHILAS",
+    "dens_pobl": "12.9946469760492",
+    "sum(hospedaje_total)": 1
+  },
+  {
+    "provincia": "TUNGURAHUA",
+    "dens_pobl": "170.557696566999",
+    "sum(hospedaje_total)": 9
+  }
+]
+
