@@ -44,7 +44,7 @@
     </div>
     <div class="col-6">
       <h2>Gráfica de densidad poblacional vs. oferta de alojamientos por provincia</h2>
-      <canvas id="canvas3"></canvas>
+      <canvas id="canvas5"></canvas>
       <p>
         En este gráfico a pesar de no tener tantos puntos, se aprecia que la densidad poblacional es directamente proporcional a la oferta de alojamiento de una provincia.
       </p>
@@ -113,6 +113,44 @@
     });
 
     let canvas3 = document.getElementById('canvas3');
+    $.getJSON("data4.json", null, (data) => {
+      let data2 = data.slice(0,24);
+      let chart = new Chart(canvas3,{
+        type: 'scatter',
+        data: {
+          labels: data2.map((d) => d.provincia),
+          datasets: [
+            {
+              label: "Scatterplot densidad poblacional vs oferta de alojamientos",
+              data: data2.map((d) => {
+                return {
+                  y: d["sum(hospedaje_total)"],
+                  x: d["dens_pobl"]
+                }
+              }),
+              backgroundColor: data2.map((d) => {
+                let r = Math.floor(Math.random() * 255);
+                let g = Math.floor(Math.random() * 255);
+                let b = Math.floor(Math.random() * 255);
+                return `rgba(${r}, ${g},${b},0.7)`;
+              })
+
+            }
+          ]
+        },
+        options: {
+          tooltips:{
+            callbacks:{
+              label: (tooltip, data) => {
+                return data.labels[tooltip.index];
+              }
+            }
+          }
+        }
+      })
+    })
+
+    let canvas5 = document.getElementById('canvas3');
     $.getJSON("data4.json", null, (data) => {
       let data2 = data.slice(0,24);
       let chart = new Chart(canvas3,{
