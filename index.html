@@ -78,6 +78,7 @@
 
       })
     });
+
     let canvas2 = document.getElementById('canvas2');
     $.getJSON("data3.json", null, (data) => {
       let data2 = data.slice(0,5);
@@ -103,7 +104,7 @@
 
     let canvas3 = document.getElementById('canvas3');
     $.getJSON("data4.json", null, (data) => {
-      let data2 = data.slice(0,100);
+      let data2 = data.slice(0,24);
       let chart = new Chart(canvas3,{
         type: 'scatter',
         data: {
@@ -138,6 +139,46 @@
         }
       })
     })
+
+
+    let canvas4 = document.getElementById('canvas3');
+    $.getJSON("data4.json", null, (data) => {
+      let data2 = data.slice(0,24);
+      let chart = new Chart(canvas3,{
+        type: 'line',
+        data: {
+          labels: data2.map((d) => d.provincia),
+          datasets: [
+            {
+              label: "Scatterplot densidad poblacional vs oferta de alojamientos",
+              data: data2.map((d) => {
+                return {
+                  y: d["sum(hospedaje_total)"],
+                  x: d["dens_pobl"]
+                }
+              }),
+              backgroundColor: data2.map((d) => {
+                let r = Math.floor(Math.random() * 255);
+                let g = Math.floor(Math.random() * 255);
+                let b = Math.floor(Math.random() * 255);
+                return `rgba(${r}, ${g},${b},0.7)`;
+              })
+
+            }
+          ]
+        },
+        options: {
+          tooltips:{
+            callbacks:{
+              label: (tooltip, data) => {
+                return data.labels[tooltip.index];
+              }
+            }
+          }
+        }
+      })
+    })
+
 
   </script>
 </body>
