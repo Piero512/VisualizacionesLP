@@ -103,7 +103,7 @@
 
     let canvas3 = document.getElementById('canvas3');
     $.getJSON("data4.json", null, (data) => {
-      let data2 = data.slice(0,5);
+      let data2 = data.slice(0,24);
       let chart = new Chart(canvas3,{
         type: 'scatter',
         data: {
