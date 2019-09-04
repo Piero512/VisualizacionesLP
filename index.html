@@ -49,18 +49,6 @@
         En este gráfico a pesar de no tener tantos puntos, se aprecia que la densidad poblacional es directamente proporcional a la oferta de alojamiento de una provincia.
       </p>
     </div>
-    <!--
-    <div class="col-6">
-      <h2>Gráfica de densidad poblacional vs. oferta de alojamientos por provincia</h2>
-      <canvas id="canvas5"></canvas>
-      <p>
-        En este gráfico a pesar de no tener tantos puntos, se aprecia que la densidad poblacional es directamente proporcional a la oferta de alojamiento de una provincia.
-      </p>
-      <canvas id="canvas4"></canvas>
-      <p>
-        En este gráfico podemos apreciar como seria una posible linea de correlacion entre la densidad poblacional y la oferta de alojamiento.
-      </p>
-    </div> -->
   </div>
 
 
@@ -115,14 +103,14 @@
 
     let canvas3 = document.getElementById('canvas3');
     $.getJSON("data4.json", null, (data) => {
-      let data2 = data.slice(0,24);
+      let data2 = data.slice(0,5);
       let chart = new Chart(canvas3,{
         type: 'scatter',
         data: {
           labels: data2.map((d) => d.provincia),
           datasets: [
             {
-              label: "Scatterplot densidad poblacional vs oferta de alojamientos",
+              label: "Scatterplot numero hospedajes provincia/ densidad poblacional",
               data: data2.map((d) => {
                 return {
                   y: d["sum(hospedaje_total)"],
@@ -135,84 +123,6 @@
                 let b = Math.floor(Math.random() * 255);
                 return `rgba(${r}, ${g},${b},0.7)`;
               })
-
-            }
-          ]
-        },
-        options: {
-          tooltips:{
-            callbacks:{
-              label: (tooltip, data) => {
-                return data.labels[tooltip.index];
-              }
-            }
-          }
-        }
-      })
-    })
-
-    let canvas5 = document.getElementById('canvas3');
-    $.getJSON("data4.json", null, (data) => {
-      let data2 = data.slice(0,24);
-      let chart = new Chart(canvas3,{
-        type: 'scatter',
-        data: {
-          labels: data2.map((d) => d.provincia),
-          datasets: [
-            {
-              label: "Scatterplot densidad poblacional vs oferta de alojamientos",
-              data: data2.map((d) => {
-                return {
-                  y: d["sum(hospedaje_total)"],
-                  x: d["dens_pobl"]
-                }
-              }),
-              backgroundColor: data2.map((d) => {
-                let r = Math.floor(Math.random() * 255);
-                let g = Math.floor(Math.random() * 255);
-                let b = Math.floor(Math.random() * 255);
-                return `rgba(${r}, ${g},${b},0.7)`;
-              })
-
-            }
-          ]
-        },
-        options: {
-          tooltips:{
-            callbacks:{
-              label: (tooltip, data) => {
-                return data.labels[tooltip.index];
-              }
-            }
-          }
-        }
-      })
-    })
-
-
-    let canvas4 = document.getElementById('canvas3');
-    $.getJSON("data4.json", null, (data) => {
-      let data2 = data.slice(0,24);
-      let chart = new Chart(canvas3,{
-        type: 'line',
-        data: {
-          labels: data2.map((d) => d.provincia),
-          datasets: [
-            {
-              label: "Scatterplot densidad poblacional vs oferta de alojamientos",
-              data: data2.map((d) => {
-                return {
-                  y: d["sum(hospedaje_total)"],
-                  x: d["dens_pobl"]
-                }
-              }),
-              backgroundColor: data2.map((d) => {
-                let r = Math.floor(Math.random() * 255);
-                let g = Math.floor(Math.random() * 255);
-                let b = Math.floor(Math.random() * 255);
-                return `rgba(${r}, ${g},${b},0.7)`;
-              })
-
             }
           ]
         },
