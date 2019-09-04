@@ -65,11 +65,11 @@
       let chart = new Chart(canvas1, {
         type: 'bar',
         data: {
-          labels : data.map((d) => d.location),
+          labels : data.splice(0,10).map((d) => d.location),
           datasets:[
             {
               label: "Precio promedio de reservación",
-              data: data.map((d) => d.avg_price),
+              data: data.splice(0,10).map((d) => d.avg_price),
               backgroundColor: '#bdabfc'
             }
           ]
