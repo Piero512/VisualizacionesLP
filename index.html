@@ -82,7 +82,7 @@
     $.getJSON("data3.json", null, (data) => {
       let data2 = data.slice(0,5);
       let chart = new Chart(canvas2, {
-        type: 'pie',
+        type: 'polarArea',
         data: {
           labels: data2.map((d) => d.location),
           datasets: [
@@ -110,7 +110,7 @@
           labels: data2.map((d) => d.provincia),
           datasets: [
             {
-              label: "Scatterplot numero hospedajes provincia/ densidad poblacional",
+              label: "Scatterplot densidad poblacional vs oferta de alojamientos",
               data: data2.map((d) => {
                 return {
                   y: d["sum(hospedaje_total)"],
